@@ -28,6 +28,7 @@ export const useGroupsStore = create<GroupState>((set, get) => ({
     loading: false,
     error: null,
 
+    //Получение данных с апи
     fetchGroups: async () => {
         set({loading: true});
         try {

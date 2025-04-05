@@ -1,6 +1,6 @@
 import {Group, GroupData, Node} from "./types";
 
-
+//Разделение данных запроса /api/groups на группы и ноды
 export const mapGroupData = (groupData: GroupData[]): { groups: Group[], nodes: Node[] } => {
     const groups: Group[] = [];
     const nodes: Node[] = [];
@@ -39,6 +39,7 @@ export const mapGroupData = (groupData: GroupData[]): { groups: Group[], nodes: 
     return { groups, nodes };
 };
 
+//Цвет в зависимости от значения
 export const getColor = (value: number) => {
     if (value > 95) return "rgba(255, 0, 0, 0.9)"; // Красный
     if (value > 85) return "rgba(255, 215, 0, 0.98)"; // Желтый

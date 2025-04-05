@@ -1,9 +1,10 @@
+//Тип группы для запроса /api/groups
 export type Group = {
     group_id: number;
     group_caption: string;
     node_id: number;
 };
-
+//Тип ноды для запроса /api/groups
 export type Node = {
     node_id: number;
     node_caption: string;
@@ -24,7 +25,7 @@ export type Node = {
 
 export type GroupData = Group & Node
 
-
+//Статус
 export const STATUS_PRIORITY: Record<string, number> = {
     darkred: 5,
     red: 4,

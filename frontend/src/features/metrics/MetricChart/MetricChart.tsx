@@ -3,6 +3,7 @@ import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
 import {Metric} from "../metricStore"
 import styles from "./MetricChart.module.css"
+import {getColor} from "../../groups/groupLib";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -10,12 +11,7 @@ interface NodeMetricsChartProps {
     node: Metric
 }
 
-const getColor = (value: number) => {
-    if (value > 95) return "rgba(255, 0, 0, 0.7)"; // Красный
-    if (value > 85) return "rgba(255, 215, 0, 0.7)"; // Желтый
-    return "rgba(54, 162, 235, 0.7)"; // Синий (по умолчанию)
-};
-
+//График метрик
 export const MetricChart: React.FC<NodeMetricsChartProps> = ({ node }) => {
     const data = {
         labels: ["CPU", "RAM", "Disk"],

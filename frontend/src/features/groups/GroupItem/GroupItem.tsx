@@ -10,6 +10,7 @@ interface GroupItemProps {
     onSelect: (groupId: number) => void;
 }
 
+//Элемент списка групп
 export const GroupItem: React.FC<GroupItemProps> = ({ group, isSelected, onSelect }) => {
     return (
         <li

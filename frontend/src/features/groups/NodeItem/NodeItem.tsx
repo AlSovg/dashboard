@@ -9,7 +9,7 @@ interface NodeItemProps {
     onSelect: (groupId: number) => void;
 }
 
-
+//Элемент списка нод
 export const NodeItem: React.FC<NodeItemProps> = ({ node, onSelect, isSelected }) => {
     return (
         <div

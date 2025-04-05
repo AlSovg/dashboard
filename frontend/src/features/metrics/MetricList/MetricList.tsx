@@ -7,6 +7,7 @@ interface Props {
     className?: string;
 }
 
+//Список графиков метрик
 export const MetricList: React.FC<Props> = ({className}) => {
     const {filteredNodes} = useMetric()
 

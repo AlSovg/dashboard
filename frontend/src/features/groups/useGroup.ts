@@ -2,8 +2,9 @@ import React, {useCallback, useMemo} from "react";
 import {useGroupsStore} from "./groupStore";
 import {STATUS_PRIORITY} from "./types";
 
+//Хук по использованию данных с /api/groups
 export const useGroup = () => {
-    const { groups, nodes, selectedGroupId, selectedNodeId, error, loading, fetchGroups, onGroupSelect, onNodeSelect, selectedNode } = useGroupsStore();
+    const { groups, nodes, selectedGroupId, selectedNodeId, error, loading, fetchGroups, onGroupSelect, onNodeSelect, selectedNode, clearSelection } = useGroupsStore();
 
     React.useEffect(() => {
         fetchGroups().then();
@@ -55,6 +56,10 @@ export const useGroup = () => {
         onNodeSelect(nodeId);
     }, [onNodeSelect]);
 
+    const handleClear = () => {
+        clearSelection();
+    };
+
     return {
         filteredGroups,
         selectGroup,
@@ -65,7 +70,8 @@ export const useGroup = () => {
         selectNode,
         selectedNodeId,
         worstStatusNode,
-        selectedNode
+        selectedNode,
+        handleClear
     };
 };
 

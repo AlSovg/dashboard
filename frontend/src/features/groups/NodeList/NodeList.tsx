@@ -8,7 +8,7 @@ interface Props {
     className?: string;
 }
 
-
+//Список нод
 export const NodeList: React.FC<Props> = ({className}) => {
     const {filteredNodes, loading, error, selectNode, selectedNodeId, selectedNode} = useGroup();
 

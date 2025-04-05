@@ -2,6 +2,7 @@ import {useGroup} from "../useGroup";
 import React from "react";
 import styles from "./StatusBlock.module.css"
 
+//Блок, отражающий статус, вычисленный по худшей ноде
 export const StatusBlock: React.FC = () => {
     const {worstStatusNode} = useGroup();
 

@@ -9,7 +9,7 @@ interface Props {
     className?: string;
 }
 
-
+//Список групп
 export const GroupList: React.FC<Props> = ({className}) => {
     const { filteredGroups, selectedGroupId, selectGroup } = useGroup();
 
