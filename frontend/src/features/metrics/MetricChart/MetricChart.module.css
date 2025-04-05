@@ -1,0 +1,13 @@
+.metric{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.metric__graph{
+    height: 90%!important;
+}
+.metric__text{
+    text-align: center;
+}

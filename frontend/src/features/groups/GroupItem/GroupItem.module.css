@@ -1,0 +1,24 @@
+.listItem {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    background-color: #afc8ed;
+    color: #000000;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.listItem:hover {
+    background: rgb(103, 164, 255);
+}
+
+.selected {
+    background-color: #67a4ff;
+    font-weight: bold;
+}
+
+.selected:hover {
+    background-color: #67a4ff;
+}

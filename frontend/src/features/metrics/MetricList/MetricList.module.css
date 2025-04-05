@@ -1,0 +1,24 @@
+.metrics{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.metrics__header {
+    font-size: 24px;
+    font-weight: bold;
+    margin: auto 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+.metrics__items {
+    margin-top: 15px;
+    height: calc(100% - 73px);
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
